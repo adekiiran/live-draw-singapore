@@ -1,69 +1,288 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-<title>LIVE DRAW</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Draw HK | SGP | SDY</title>
+  <style>
+    :root{
+      --bg1:#050816;
+      --bg2:#0b1b3a;
+      --card:rgba(255,255,255,0.08);
+      --line:rgba(255,255,255,0.18);
+      --text:#ffffff;
+      --accent:#00f5ff;
+      --accent2:#ff3df2;
+      --green:#35ff7a;
+      --yellow:#ffd84d;
+      --red:#ff5b5b;
+    }
 
-<style>
-body {
-  margin: 0;
-  background-image: url('https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif'); /* GIF bergerak */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white;
-  text-align: center;
-  font-family: Arial, sans-serif;
-}
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
 
-.judul {
-  font-size: 40px;
-  color: red;
-  text-shadow: 0 0 10px red, 0 0 20px red, 0 0 40px red;
-  margin-top: 100px;
-}
+    body{
+      min-height:100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      color:var(--text);
+      text-align:center;
+      overflow-x:hidden;
+      background:
+        radial-gradient(circle at top left, rgba(255,61,242,0.22), transparent 28%),
+        radial-gradient(circle at top right, rgba(0,245,255,0.22), transparent 30%),
+        radial-gradient(circle at bottom center, rgba(53,255,122,0.15), transparent 30%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      background-size: 200% 200%;
+      animation: bgMove 12s ease-in-out infinite;
+    }
 
-.box {
-  background: rgba(0,0,0,0.6);
-  margin: 20px auto;
-  padding: 20px;
-  width: 80%;
-  border-radius: 10px;
-}
-</style>
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:
+        linear-gradient(120deg, rgba(255,255,255,0.05) 0%, transparent 25%, transparent 75%, rgba(255,255,255,0.05) 100%);
+      pointer-events:none;
+      mix-blend-mode:overlay;
+      opacity:.35;
+    }
 
+    @keyframes bgMove{
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .wrapper{
+      width:min(1100px, 92%);
+      margin:40px auto;
+      padding:24px;
+      position:relative;
+      z-index:1;
+    }
+
+    .title{
+      font-size:clamp(28px, 4vw, 52px);
+      font-weight:900;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      color:#fff;
+      text-shadow:
+        0 0 8px rgba(0,245,255,.8),
+        0 0 18px rgba(255,61,242,.55);
+      margin-bottom:10px;
+    }
+
+    .subtitle{
+      margin-bottom:24px;
+      color:#cfe9ff;
+      font-size:14px;
+      letter-spacing:1px;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:18px;
+      box-shadow:
+        0 10px 40px rgba(0,0,0,0.35),
+        inset 0 1px 0 rgba(255,255,255,0.08);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .table-wrap{
+      overflow-x:auto;
+      border-radius:18px;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      min-width:760px;
+      background:rgba(0,0,0,0.18);
+    }
+
+    th, td{
+      padding:14px 12px;
+      border:1px solid rgba(255,255,255,0.12);
+      font-size:15px;
+    }
+
+    th{
+      background:linear-gradient(135deg, rgba(0,245,255,0.22), rgba(255,61,242,0.18));
+      color:#ffffff;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      font-size:13px;
+      position:sticky;
+      top:0;
+      z-index:2;
+    }
+
+    tbody tr{
+      transition:0.25s ease;
+    }
+
+    tbody tr:nth-child(even){
+      background:rgba(255,255,255,0.04);
+    }
+
+    tbody tr:hover{
+      background:rgba(0,245,255,0.10);
+      transform:scale(1.01);
+    }
+
+    td{
+      color:#eaf6ff;
+    }
+
+    td:first-child{
+      color:var(--yellow);
+      font-weight:bold;
+    }
+
+    td:nth-child(2){
+      color:var(--accent);
+      font-weight:bold;
+    }
+
+    td:nth-child(3){
+      color:var(--red);
+      font-weight:bold;
+    }
+
+    td:nth-child(4),
+    td:nth-child(5),
+    td:nth-child(6){
+      color:var(--green);
+      font-weight:bold;
+    }
+
+    .badge{
+      display:inline-block;
+      margin-top:16px;
+      padding:10px 16px;
+      border-radius:999px;
+      background:linear-gradient(90deg, rgba(0,245,255,.20), rgba(255,61,242,.18));
+      border:1px solid rgba(255,255,255,.14);
+      color:#fff;
+      font-size:13px;
+      letter-spacing:1px;
+      box-shadow:0 0 18px rgba(0,245,255,.15);
+    }
+
+    .footer{
+      margin-top:18px;
+      font-size:12px;
+      color:#bdd7ff;
+      opacity:.85;
+    }
+
+    @media (max-width: 768px){
+      .wrapper{
+        width:94%;
+        padding:14px;
+        margin:20px auto;
+      }
+
+      .card{
+        padding:12px;
+      }
+
+      th, td{
+        padding:12px 10px;
+        font-size:14px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="wrapper">
+    <h1 class="title">LIVE DRAW HK | SGP | SDY</h1>
+    <div class="subtitle">Update hasil terbaru dengan tampilan modern dan elegan</div>
 
-<h1 class="judul">LIVE DRAW HK | SGP | SDY</h1>
+    <div class="card">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Tanggal</th>
+              <th>Hari</th>
+              <th>HK LOTTO</th>
+              <th>SGP</th>
+              <th>HK</th>
+              <th>SDY</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>12-04-2026</td>
+              <td>MINGGU</td>
+              <td>5678</td>
+              <td>5342</td>
+              <td>3221</td>
+              <td>5764</td>
+            </tr>
+            <tr>
+              <td>11-04-2026</td>
+              <td>SENIN</td>
+              <td>3456</td>
+              <td>6753</td>
+              <td>6778</td>
+              <td>5566</td>
+            </tr>
+            <tr>
+              <td>10-04-2026</td>
+              <td>SELASA</td>
+              <td>7753</td>
+              <td>7087</td>
+              <td>5543</td>
+              <td>2211</td>
+            </tr>
+            <tr>
+              <td>09-04-2026</td>
+              <td>RABU</td>
+              <td>5356</td>
+              <td>7453</td>
+              <td>7435</td>
+              <td>2423</td>
+            </tr>
+            <tr>
+              <td>08-04-2026</td>
+              <td>KAMIS</td>
+              <td>0463</td>
+              <td>3535</td>
+              <td>4535</td>
+              <td>3526</td>
+            </tr>
+            <tr>
+              <td>07-04-2026</td>
+              <td>JUMAT</td>
+              <td>2442</td>
+              <td>2355</td>
+              <td>5343</td>
+              <td>4660</td>
+            </tr>
+            <tr>
+              <td>06-04-2026</td>
+              <td>SABTU</td>
+              <td>7678</td>
+              <td>8767</td>
+              <td>5645</td>
+              <td>3453</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-<div class="box">
-  <p>Selamat datang di live draw</p>
-  <p>Update hasil tercepat 🔥</p>
-</div>
-
-</body>
-<div class="overlay">
-
-<h1 class="judul">LIVE DRAW HK | SGP | SDY</h1>
-
-<div class="jam">JAM SEKARANG: <span id="jam"></span></div>
-
-<div class="box">
-  <h2>HONGKONG <span class="live">● LIVE</span></h2>
-  <div class="angka" id="hk">0 0 0 0</div>
-</div>
-
-<div class="box">
-  <h2>SINGAPORE <span class="live">● LIVE</span></h2>
-  <div class="angka" id="sgp">0 0 0 0</div>
-</div>
-
-<div class="box">
-  <h2>SYDNEY <span class="live">● LIVE</span></h2>
-  <div class="angka" id="sdy">0 0 0 0</div>
-</div>
-
-</div>
-
+      <div class="badge">STATUS: LIVE DRAW ONLINE</div>
+      <div class="footer">Desain background neon + glass effect</div>
+    </div>
+  </div>
 </body>
 </html>
