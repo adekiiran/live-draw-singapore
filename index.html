@@ -1,162 +1,169 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LANAYA88</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #8b0000;
-      color: white;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Draw & Jadwal Bola</title>
 
-    header {
-      background: linear-gradient(to right, #b30000, #ff0000);
-      padding: 20px;
-      text-align: center;
-      font-size: 28px;
-      font-weight: bold;
-    }
+<style>
+body{
+  font-family: Arial, sans-serif;
+  background:#0f172a;
+  color:white;
+  margin:0;
+  padding:20px;
+}
 
-    .banner {
-      text-align: center;
-      padding: 20px;
-      background: #a00000;
-      font-size: 24px;
-      font-weight: bold;
-    }
+h2{
+  text-align:center;
+  margin:20px 0;
+}
 
-    .menu {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-      padding: 20px;
-    }
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-bottom:20px;
+}
 
-    .card {
-      background: #cc0000;
-      padding: 30px;
-      text-align: center;
-      border-radius: 15px;
-      font-size: 20px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+td, th{
+  border:1px solid #444;
+  padding:12px;
+  text-align:center;
+}
 
-    .card:hover {
-      background: #ff1a1a;
-      transform: scale(1.05);
-    }
+td{
+  background:#1e293b;
+}
 
- .card:active {
-    transform: scale(0.95);
-  } 
+.link{
+  background:#111827;
+}
 
-    table {
-      width: 95%;
-      margin: 20px auto;
-      border-collapse: collapse;
-      background: white;
-      color: black;
-    }
+.link a{
+  color:#00ffff;
+  text-decoration:none;
+  font-weight:bold;
+}
 
-    th, td {
-      padding: 10px;
-      border: 1px solid #ccc;
-      text-align: center;
-    }
+.header{
+  background:#334155;
+  font-weight:bold;
+}
 
-    th {
-      background: #4CAF50;
-      color: white;
-    }
-  </style>
+.highlight{
+  background:#020617;
+  font-size:18px;
+  color:#00ffcc;
+}
+
+/* RUNNING TEXT */
+.running-text {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.running-text span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: jalan 15s linear infinite;
+}
+
+@keyframes jalan {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+</style>
 </head>
+
 <body>
 
-<header>LANAYA88</header>
-
-<div class="menu">
-
-  <div class="card" onclick="location.href='cambodia.html'">
-    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjcwUzd94wqD5jroT8t8t2RbWyqhkSzdQ7jEnJsL4c0tPAe9s5YPgTjRpGwAY5aNAXn5Kq_HHh75hsXavyKm0CyijRBhBg9TcGq2mOWQqQ5xL7GzZ-c5oNhzyW6oHkG4f1dN51fsE0EibR13Mi2GEYU4N-_jYvd5bMl7iyOxZEgZdwM_fG9M-AizxQSt0hH" style="width:100%">
-    <div style="margin-top:10px;">Cambodia</div>
-  </div>
-
-  <div class="card" onclick="location.href='sydney.html'">
-    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEi8nz-DPijYF0ZTrgdEqmFnLGZgrWeSiL7VuB_turUfSl7R64Wn2jEb6CvVQHnF8RoZMEus1YCVL6dC5gTQfw1h7N1rXl7eEV-QmfnX9NvZftirBYL2zzcpV97cBOuPPRB-JizKZgRgeMZZavZ6Ynxq9wezVnAuKGrTB9FLII5QPw1aOXXQjNs-_W59MD-G" style="width:100%">
-    <div style="margin-top:10px;">Sydney</div>
-  </div>
-
-  <div class="card" onclick="location.href='singapore.html'">
-    <img src="singapore.gif" style="width:100%">
-    <div style="margin-top:10px;">Singapore</div>
-  </div>
-
-  <div class="card" onclick="location.href='china.html'">
-    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEimV4Cocg9YUuISC17Pj0DtKWIkXlmixozELSpHdSoZE2JH0k6GgFjbG6Roz6b3Qrvm13Dj3uMJQt0HTaJP6IciJQ6yjBUT0FXe64XuAJtPRLmw10SsLCWK9cKBMV7DNr-_oRMMPbJFwWQ9pBmuVA4C2JGazr8nQN--JH3sjFQsNhKaZnt-58BTy1IK4HEZ" style="width:100%">
-    <div style="margin-top:10px;">CHINA</div>
-  </div>
-
-  <div class="card" onclick="location.href='taiwan.html'">
-    <img src="taiwan.gif" style="width:100%">
-    <div style="margin-top:10px;">TAIWAN</div>
-  </div>
-
-  <div class="card" onclick="location.href='hongkong.html'">
-    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEimV4Cocg9YUuISC17Pj0DtKWIkXlmixozELSpHdSoZE2JH0k6GgFjbG6Roz6b3Qrvm13Dj3uMJQt0HTaJP6IciJQ6yjBUT0FXe64XuAJtPRLmw10SsLCWK9cKBMV7DNr-_oRMMPbJFwWQ9pBmuVA4C2JGazr8nQN--JH3sjFQsNhKaZnt-58BTy1IK4HEZ" style="width:100%">
-    <div style="margin-top:10px;">HONGKONG</div>
-  </div>
-
-</div>
-<div style="text-align:center; margin-top:20px; font-weight:bold; font-size:18px; color:gold; text-shadow: 0 0 10px yellow;">
-  BONUS CASHBACK 30% UNTUK SEMUA PERMAINAN
-</div>
-
-<h2 style="text-align:center; margin-top:30px; color:yellow;">
-  PILIH PASARAN TOGEL
-</h2>
-<div class="menu">
-  <div class="card" onclick="location.href='cambodia.html'">CAMBODIA</div>
-  <div class="card" onclick="location.href='sydney.html'">SYDNEY</div>
-  <div class="card" onclick="location.href='singapore.html'">SINGAPORE</div>
-  <div class="card" onclick="location.href='china.html'">CHINA</div>
-  <div class="card" onclick="location.href='taiwan.html'">TAIWAN</div>
-  <div class="card" onclick="location.href='hongkong.html'">HONGKONG</div>
-</div>
+<h2>KLASEMEN & LINK</h2>
 
 <table>
-  <tr>
-    <th>TANGGAL</th>
-    <th>HARI</th>
-    <th>HK</th>
-    <th>SGP</th>
-    <th>SDY</th>
-  </tr>
-  <tr>
-    <td>12-04-2026</td>
-    <td>MINGGU</td>
-    <td>-</td>
-    <td>2218</td>
-    <td>8615</td>
-  </tr>
-  <tr>
-    <td>11-04-2026</td>
-    <td>SABTU</td>
-    <td>8785</td>
-    <td>8025</td>
-    <td>5469</td>
-  </tr>
-  <tr>
-    <td>10-04-2026</td>
-    <td>JUMAT</td>
-    <td>0597</td>
-    <td>-</td>
-    <td>2117</td>
-  </tr>
+<tr>
+  <td>KLASEMEN LIGA SPANYOL</td>
+  <td>KLASEMEN LIGA JERMAN</td>
+  <td class="link"><a href="#">SITUS SLOT DI KLIK LINK</a></td>
+</tr>
+
+<tr>
+  <td>KLASEMEN LIGA ITALY</td>
+  <td>KLASEMEN LIGA PRANCIS</td>
+  <td class="link"><a href="#">SITUS SLOT DI KLIK LINK</a></td>
+</tr>
+
+<tr>
+  <td>KLASEMEN LIGA INGGRIS</td>
+  <td>KLASEMEN LIGA INGGRIS</td>
+  <td class="link"><a href="#">SITUS SLOT DI KLIK LINK</a></td>
+</tr>
+</table>
+
+<h2>JADWAL PERTANDINGAN</h2>
+
+<table>
+<tr class="header">
+  <td colspan="3">Jadwal Pertandingan Sepak Hari ini Liga Champion</td>
+</tr>
+
+<tr>
+  <td>BARCELONA</td>
+  <td>VS</td>
+  <td>PSG</td>
+</tr>
+
+<tr>
+  <td>Pukul</td>
+  <td>Jadwal</td>
+  <td>Main</td>
+</tr>
+
+<tr>
+  <td>SCOR</td>
+  <td>-</td>
+  <td>SCOR</td>
+</tr>
+
+<tr>
+  <td colspan="3" class="link">
+    <a href="#">SITUS SLOT DI KLIK LINK</a>
+  </td>
+</tr>
+</table>
+
+<h2>PASARAN RESULT ANGKA TOGEL</h2>
+
+<table>
+<tr>
+  <td>CAMBODIA</td>
+  <td>CHINA</td>
+  <td class="link"><a href="#">SITUS SLOT DI KLIK LINK</a></td>
+</tr>
+
+<tr>
+  <td>TOTO MACAU</td>
+  <td>SINGAPORE</td>
+  <td class="link"><a href="#">SITUS SLOT DI KLIK LINK</a></td>
+</tr>
+
+<tr>
+  <td>SYDNEY</td>
+  <td>HONGKONG</td>
+  <td class="link"><a href="#">SITUS SLOT DI KLIK LINK</a></td>
+</tr>
+
+<tr class="highlight">
+  <td colspan="3">
+    <div class="running-text">
+      <span>
+        3536 Sydney --- 8736 Cambodia --- 8463 Hongkong --- 
+        3536 Sydney --- 8736 Cambodia --- 8463 Hongkong ---
+        3536 Sydney --- 8736 Cambodia --- 8463 Hongkong
+      </span>
+    </div>
+  </td>
+</tr>
 </table>
 
 </body>
