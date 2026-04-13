@@ -2,368 +2,117 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LANAYA88 PRO MAX</title>
-
+<title>LANAYA88</title>
 <style>
-body{
-  margin:0;
-  font-family:'Segoe UI',Arial;
-  background:linear-gradient(160deg,#06131f,#0d2a3f);
-  color:#fff;
+body {
+  font-family: Arial;
+  background: #e6e6e6;
+  margin: 0;
 }
 
-.container{
-  width:100%;
-  max-width:1400px;
-  margin:auto;
+.header {
+  text-align: center;
+  background: #bcd;
+  padding: 10px;
+  font-size: 28px;
+  font-weight: bold;
 }
 
-.header{
-  text-align:center;
-  padding:30px;
-  font-size:50px;
-  font-weight:900;
-  letter-spacing:2px;
-  background:linear-gradient(90deg,#ffd700,#ff9800);
-  color:#000;
+.sub {
+  text-align: center;
+  background: #eee;
+  padding: 5px;
 }
 
-.running{
-  margin:10px 0;
-  padding:12px;
-  background:#12344a;
-  border-radius:30px;
-  overflow:hidden;
-}
-.running span{
-  display:inline-block;
-  animation:jalan 12s linear infinite;
-  font-weight:bold;
+.container {
+  display: flex;
 }
 
-@keyframes jalan{
-  0%{transform:translateX(100%)}
-  100%{transform:translateX(-100%)}
+.left, .right {
+  width: 50%;
+  padding: 10px;
 }
 
-.section-title{
-  background:#ffd700;
-  color:#000;
-  padding:10px;
-  font-weight:900;
-  letter-spacing:1px;
+.box {
+  border: 1px solid #000;
+  margin-bottom: 5px;
+  padding: 5px;
+  background: #cfe2ff;
+  text-align: center;
 }
 
-.grid{
-  display:grid;
-  grid-template-columns:2.5fr 1fr; /* lebih sempit kiri */
-  gap:8px;
+.footer {
+  text-align: center;
+  padding: 10px;
+  background: #ddd;
 }
-
-.table td{
-  padding:8px 6px; /* lebih rapat */
-  font-size:13px;
-}
-
-.name{width:40%}
-.number{width:30%;text-align:center}
-.arrow{width:30%;text-align:right}
-
-.ads{
-  display:grid;
-  grid-template-rows:repeat(4, 1fr); /* 4 banner kanan */
-  gap:8px;
-}
-
-.ad-box{
-  height:120px;
-  font-size:18px;
-}
-
-
-.list{
-  max-width:100%;
-}
-
-.table{
-  width:100%;
-  table-layout:fixed; /* biar tidak melebar */
-}
-
-.table td{
-  overflow:hidden;
-  text-overflow:ellipsis;
-  white-space:nowrap;
-}
-
-.ads{
-  position:sticky;
-  top:10px; /* biar iklan tetap di kanan */
-}
-
-.ad-box{
-  height:200px; /* ukuran fix biar rapi */
-}
-
-/* TABEL STYLE EXCEL */
-.table{
-  border-collapse:collapse;
-  width:100%;
-}
-
-.table tr{
-  border-bottom:1px solid rgba(255,255,255,.2);
-}
-
-.table td{
-  padding:12px;
-  font-size:15px;
-}
-
-.table tr:nth-child(even){
-  background:rgba(255,255,255,.03);
-}
-
-.name{
-  font-weight:700;
-  letter-spacing:.5px;
-}
-
-.number{
-  font-weight:900;
-  text-align:right;
-}
-
-/* PANAH LEBIH HIDUP */
-.arrow{
-  color:#4fc3ff;
-  font-size:20px;
-  animation:arrowMove .8s infinite;
-}
-
-@keyframes arrowMove{
-  0%{transform:translateX(0);opacity:.5}
-  50%{transform:translateX(8px);opacity:1}
-  100%{transform:translateX(0);opacity:.5}
-}
-
-/* IKLAN */
-.ads{
-  display:flex;
-  flex-direction:column;
-}
-
-.ad-box{
-  flex:1;
-  margin:5px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:24px;
-  font-weight:900;
-  background:linear-gradient(135deg,#ffd700,#ff9800);
-  color:#000;
-}
-
-/* TEXT BERJALAN */
-.auto{
-  color:#ff4d5a;
-  padding:10px;
-  overflow:hidden;
-  white-space:nowrap;
-  font-weight:bold;
-}
-
-.auto span{
-  display:inline-block;
-  animation:jalan 10s linear infinite;
-}
-
-.banner{
-  margin-top:10px;
-  padding:25px;
-  text-align:center;
-  font-size:26px;
-  font-weight:900;
-  background:linear-gradient(90deg,#ffd700,#ff9800);
-  color:#000;
-}
-
-.jadwal{
-  margin-top:10px;
-}
-
-.jadwal .row{
-  display:flex;
-  justify-content:space-between;
-  padding:12px;
-  border-bottom:1px solid rgba(255,255,255,.2);
-  font-weight:600;
-}
-
-a{
-  color:#00e5ff;
-  font-weight:bold;
-}
-
 </style>
 </head>
 
 <body>
-<div class="container">
 
 <div class="header">LANAYA88</div>
+<div class="sub">SITUS RESMI PASARAN TOGEL SELURUH DUNIA</div>
 
-<div class="running"><span>UPDATE PERTANDINGAN SEPAK BOLA SETIAP HARI ➜ ➜ ➜</span></div>
-<div class="running"><span>UPDATE HASIL PASARAN TOGEL TERBARU ➜ ➜ ➜</span></div>
+<div class="container">
 
-<div class="section-title">HASIL PASARAN</div>
-
-<div class="grid">
-
-<div>
-<table class="table">
-<tr><td class="name">CAMBODIA</td><td class="number">|  <span id="cambodia"></span>  |</td><td class="arrow">➜</td></tr>
-<tr><td class="name">MACAU</td><td class="number">|  <span id="macau"></span>  |</td><td class="arrow">➜</td></tr>
-<tr><td class="name">SYDNEY</td><td class="number">|  <span id="sydney"></span>  |</td><td class="arrow">➜</td></tr>
-<tr><td class="name">CHINA</td><td class="number">|  <span id="china"></span>  |</td><td class="arrow">➜</td></tr>
-<tr><td class="name">SINGAPORE</td><td class="number">|  <span id="singapore"></span>  |</td><td class="arrow">➜</td></tr>
-<tr><td class="name">JEPANG</td><td class="number">|  <span id="jepang"></span>  |</td><td class="arrow">➜</td></tr>
-<tr><td class="name">TAIWAN</td><td class="number">|  <span id="taiwan"></span>  |</td><td class="arrow">➜</td></tr>
-<tr><td class="name">HONGKONG</td><td class="number">|  <span id="hongkong"></span>  |</td><td class="arrow">➜</td></tr>
-</table>
-
-<div class="auto"><span id="runningText"></span></div>
+<div class="left">
+  <div class="box">DANANG</div>
+  <div class="box">MAGNUM4D</div>
+  <div class="box">SYDNEY</div>
+  <div class="box">HONGKONG</div>
+  <div class="box">SINGAPORE</div>
+<div class="box">DATA 1</div>
+  <div class="box">DATA 2</div>
+  <div class="box">DATA 3</div>
+  <div class="box">DATA 4</div>
+  <div class="box">DATA 5</div>
+  <div class="box">DATA 6</div>
+  <div class="box">DATA 7</div>
+  <div class="box">DATA 8</div>
+  <div class="box">DATA 9</div>
+  <div class="box">DATA 10</div>
+<div class="box">DATA 1</div>
+  <div class="box">DATA 2</div>
+  <div class="box">DATA 3</div>
+  <div class="box">DATA 4</div>
+  <div class="box">DATA 5</div>
+  <div class="box">DATA 6</div>
+  <div class="box">DATA 7</div>
+  <div class="box">DATA 8</div>
+  <div class="box">DATA 9</div>
+  <div class="box">DATA 10</div>
 </div>
 
-<div class="ads">
-<div class="ad-box">IKLAN 1</div>
-<div class="ad-box">IKLAN 2</div>
-<div class="ad-box">IKLAN 3</div>
-<div class="ad-box">IKLAN 4</div>
-</div>
-<div class="ad-box">IKLAN BENNER</div>
-</div>
-
-</div>
-
-<div class="banner">IKLAN BENNER</div>
-
-<div class="jadwal">
-<h3>JADWAL BOLA</h3>
-
-<div style="display:grid;grid-template-columns:1fr 2fr 1fr;gap:6px">
-<div>Spanyol</div><div>Madrid vs Barcelona</div><div><a href="#">klik</a></div>
-<div>Prancis</div><div>PSG vs Lyon</div><div><a href="#">buka</a></div>
-<div>Inggris</div><div>MU vs Liverpool</div><div><a href="#">link</a></div>
-<div>Italia</div><div>Juventus vs Milan</div><div><a href="#">klik</a></div>
-</div>
-
-<!-- 4 BENNER BAWAH -->
-<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px">
-<div class="ad-box">IKLAN</div>
-<div class="ad-box">IKLAN</div>
-<div class="ad-box">IKLAN</div>
-<div class="ad-box">IKLAN</div>
-</div>
-
-</div>
-  <div class="row">Prancis</div>
-  <div class="row">Inggris</div>
-  <div class="row">Italia</div>
-  <div class="row">Jerman</div>
-  <div class="row">Belanda</div>
-</div>
-
-<!-- KOLOM JADWAL / ISI -->
-<div>
-  <div class="row">Madrid vs Barcelona</div>
-  <div class="row">PSG vs Lyon</div>
-  <div class="row">MU vs Liverpool</div>
-  <div class="row">Juventus vs Milan</div>
-  <div class="row">Bayern vs Dortmund</div>
-  <div class="row">Ajax vs PSV</div>
-</div>
-
-<!-- KOLOM LINK -->
-<div>
-  <div class="row"><a href="#">klik</a></div>
-  <div class="row"><a href="#">buka</a></div>
-  <div class="row"><a href="#">link</a></div>
-  <div class="row"><a href="#">klik</a></div>
-  <div class="row"><a href="#">buka</a></div>
-  <div class="row"><a href="#">link</a></div>
-</div>
-
-</div>
-</div>
-<div class="row">Liga Prancis <a href="#">buka</a></div>
-<div class="row">Liga Inggris <a href="#">link</a></div>
-<div class="row">Liga Italia <a href="#">klik</a></div>
-<div class="row">Liga Jerman <a href="#">buka</a></div>
-<div class="row">Liga Belanda <a href="#">link</a></div>
-</div>
-<div class="row">Liga France <a href="#">buka</a></div>
-<div class="row">Liga Inggris <a href="#">link</a></div>
-</div>
-
-<!-- KONTAK / LINK -->
-<div style="margin-top:20px;padding:15px;border-top:1px solid rgba(255,255,255,.2)">
-  <h3 style="margin-bottom:10px">HUBUNGI KAMI</h3>
-
-  <div style="display:flex;gap:15px;flex-wrap:wrap;justify-content:center">
-
-    <!-- WHATSAPP -->
-    <a href="https://wa.me/6281234567890" target="_blank" style="text-decoration:none">
-      <div style="display:flex;align-items:center;gap:8px;background:#25D366;padding:10px 14px;border-radius:10px;color:#000;font-weight:bold">
-        <span>📱</span> WhatsApp
-      </div>
-    </a>
-
-    <!-- TELEGRAM -->
-    <a href="https://t.me/usernameanda" target="_blank" style="text-decoration:none">
-      <div style="display:flex;align-items:center;gap:8px;background:#229ED9;padding:10px 14px;border-radius:10px;color:#fff;font-weight:bold">
-        <span>✈️</span> Telegram
-      </div>
-    </a>
-
-    <!-- LIVE CHAT -->
-    <a href="#" style="text-decoration:none">
-      <div style="display:flex;align-items:center;gap:8px;background:#ffcc00;padding:10px 14px;border-radius:10px;color:#000;font-weight:bold">
-        <span>💬</span> Live Chat
-      </div>
-    </a>
-
-  </div>
+<div class="right">
+  <!-- ulangi bagian ini -->
+  <div class="box">DATA 1</div>
+  <div class="box">DATA 2</div>
+  <div class="box">DATA 3</div>
+  <div class="box">DATA 4</div>
+  <div class="box">DATA 5</div>
+  <div class="box">DATA 6</div>
+  <div class="box">DATA 7</div>
+  <div class="box">DATA 8</div>
+  <div class="box">DATA 9</div>
+  <div class="box">DATA 10</div>
+ <div class="box">DATA 1</div>
+  <div class="box">DATA 2</div>
+  <div class="box">DATA 3</div>
+  <div class="box">DATA 4</div>
+  <div class="box">DATA 5</div>
+  <div class="box">DATA 6</div>
+  <div class="box">DATA 7</div>
+  <div class="box">DATA 8</div>
+  <div class="box">DATA 9</div>
+  <div class="box">DATA 10</div>
 </div>
 
 </div>
 
+<div class="footer">
+  WHATSAPP | TELEGRAM | FACEBOOK
 </div>
-
-<script>
-const data={
-  cambodia:"8463",
-  macau:"2345",
-  sydney:"7788",
-  china:"9912",
-  singapore:"6621",
-  jepang:"1199",
-  taiwan:"4455",
-  hongkong:"8833"
-};
-
-for(let key in data){
-  document.getElementById(key).innerText=data[key];
-}
-
-let text="HASIL TERBARU: ";
-for(let key in data){text+=key.toUpperCase()+":"+data[key]+" | ";}
-document.getElementById("runningText").innerText=text;
-
-setInterval(()=>{location.reload();},60000);
-</script>
 
 </body>
 </html>
