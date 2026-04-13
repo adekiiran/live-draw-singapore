@@ -3,168 +3,272 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Live Draw & Jadwal Bola</title>
+<title>LANAYA88 PRO MAX</title>
 
 <style>
 body{
-  font-family: Arial, sans-serif;
-  background:#0f172a;
-  color:white;
   margin:0;
-  padding:20px;
+  font-family:'Segoe UI',Arial;
+  background:linear-gradient(160deg,#06131f,#0d2a3f);
+  color:#fff;
 }
 
-h2{
-  text-align:center;
-  margin:20px 0;
-}
-
-table{
+.container{
   width:100%;
-  border-collapse:collapse;
-  margin-bottom:20px;
-}
-
-td, th{
-  border:1px solid #444;
-  padding:12px;
-  text-align:center;
-}
-
-td{
-  background:#1e293b;
-}
-
-.link{
-  background:#111827;
-}
-
-.link a{
-  color:#00ffff;
-  text-decoration:none;
-  font-weight:bold;
+  max-width:1400px;
+  margin:auto;
 }
 
 .header{
-  background:#334155;
+  text-align:center;
+  padding:30px;
+  font-size:50px;
+  font-weight:900;
+  letter-spacing:2px;
+  background:linear-gradient(90deg,#ffd700,#ff9800);
+  color:#000;
+}
+
+.running{
+  margin:10px 0;
+  padding:12px;
+  background:#12344a;
+  border-radius:30px;
+  overflow:hidden;
+}
+.running span{
+  display:inline-block;
+  animation:jalan 12s linear infinite;
   font-weight:bold;
 }
 
-.highlight{
-  background:#020617;
-  font-size:18px;
-  color:#00ffcc;
+@keyframes jalan{
+  0%{transform:translateX(100%)}
+  100%{transform:translateX(-100%)}
 }
 
-/* RUNNING TEXT */
-.running-text {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
+.section-title{
+  background:#ffd700;
+  color:#000;
+  padding:10px;
+  font-weight:900;
+  letter-spacing:1px;
 }
 
-.running-text span {
-  display: inline-block;
-  padding-left: 100%;
-  animation: jalan 15s linear infinite;
+.grid{
+  display:grid;
+  grid-template-columns:2fr 1fr;
 }
 
-@keyframes jalan {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-100%); }
+/* TABEL STYLE EXCEL */
+.table{
+  border-collapse:collapse;
+  width:100%;
 }
+
+.table tr{
+  border-bottom:1px solid rgba(255,255,255,.2);
+}
+
+.table td{
+  padding:12px;
+  font-size:15px;
+}
+
+.table tr:nth-child(even){
+  background:rgba(255,255,255,.03);
+}
+
+.name{
+  font-weight:700;
+  letter-spacing:.5px;
+}
+
+.number{
+  font-weight:900;
+  text-align:right;
+}
+
+/* PANAH LEBIH HIDUP */
+.arrow{
+  color:#4fc3ff;
+  font-size:20px;
+  animation:arrowMove .8s infinite;
+}
+
+@keyframes arrowMove{
+  0%{transform:translateX(0);opacity:.5}
+  50%{transform:translateX(8px);opacity:1}
+  100%{transform:translateX(0);opacity:.5}
+}
+
+/* IKLAN */
+.ads{
+  display:flex;
+  flex-direction:column;
+}
+
+.ad-box{
+  flex:1;
+  margin:5px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:24px;
+  font-weight:900;
+  background:linear-gradient(135deg,#ffd700,#ff9800);
+  color:#000;
+}
+
+/* TEXT BERJALAN */
+.auto{
+  color:#ff4d5a;
+  padding:10px;
+  overflow:hidden;
+  white-space:nowrap;
+  font-weight:bold;
+}
+
+.auto span{
+  display:inline-block;
+  animation:jalan 10s linear infinite;
+}
+
+.banner{
+  margin-top:10px;
+  padding:25px;
+  text-align:center;
+  font-size:26px;
+  font-weight:900;
+  background:linear-gradient(90deg,#ffd700,#ff9800);
+  color:#000;
+}
+
+.jadwal{
+  margin-top:10px;
+}
+
+.jadwal .row{
+  display:flex;
+  justify-content:space-between;
+  padding:12px;
+  border-bottom:1px solid rgba(255,255,255,.2);
+  font-weight:600;
+}
+
+a{
+  color:#00e5ff;
+  font-weight:bold;
+}
+
 </style>
 </head>
 
 <body>
+<div class="container">
 
-<h2>KLASEMEN & LINK</h2>
+<div class="header">LANAYA88</div>
 
-<table>
-<tr>
-  <td>KLASEMEN LIGA SPANYOL</td>
-  <td>KLASEMEN LIGA JERMAN</td>
-  <td class="link"><a href="#">SITUS SLOT DI KLIK LINK</a></td>
-</tr>
+<div class="running"><span>UPDATE PERTANDINGAN SEPAK BOLA SETIAP HARI ➜ ➜ ➜</span></div>
+<div class="running"><span>UPDATE HASIL PASARAN TOGEL TERBARU ➜ ➜ ➜</span></div>
 
-<tr>
-  <td>KLASEMEN LIGA ITALY</td>
-  <td>KLASEMEN LIGA PRANCIS</td>
-  <td class="link"><a href="#">SITUS SLOT DI KLIK LINK</a></td>
-</tr>
+<div class="section-title">HASIL PASARAN</div>
 
-<tr>
-  <td>KLASEMEN LIGA INGGRIS</td>
-  <td>KLASEMEN LIGA INGGRIS</td>
-  <td class="link"><a href="#">SITUS SLOT DI KLIK LINK</a></td>
-</tr>
+<div class="grid">
+
+<div>
+<table class="table">
+<tr><td class="name">CAMBODIA</td><td class="number">|  <span id="cambodia"></span>  |</td><td class="arrow">➜</td></tr>
+<tr><td class="name">MACAU</td><td class="number">|  <span id="macau"></span>  |</td><td class="arrow">➜</td></tr>
+<tr><td class="name">SYDNEY</td><td class="number">|  <span id="sydney"></span>  |</td><td class="arrow">➜</td></tr>
+<tr><td class="name">CHINA</td><td class="number">|  <span id="china"></span>  |</td><td class="arrow">➜</td></tr>
+<tr><td class="name">SINGAPORE</td><td class="number">|  <span id="singapore"></span>  |</td><td class="arrow">➜</td></tr>
+<tr><td class="name">JEPANG</td><td class="number">|  <span id="jepang"></span>  |</td><td class="arrow">➜</td></tr>
+<tr><td class="name">TAIWAN</td><td class="number">|  <span id="taiwan"></span>  |</td><td class="arrow">➜</td></tr>
+<tr><td class="name">HONGKONG</td><td class="number">|  <span id="hongkong"></span>  |</td><td class="arrow">➜</td></tr>
 </table>
 
-<h2>JADWAL PERTANDINGAN</h2>
+<div class="auto"><span id="runningText"></span></div>
+</div>
 
-<table>
-<tr class="header">
-  <td colspan="3">Jadwal Pertandingan Sepak Hari ini Liga Champion</td>
-</tr>
+<div class="ads">
+<div class="ad-box">IKLAN BENNER</div>
+<div class="ad-box">IKLAN BENNER</div>
+</div>
 
-<tr>
-  <td>BARCELONA</td>
-  <td>VS</td>
-  <td>PSG</td>
-</tr>
+</div>
 
-<tr>
-  <td>Pukul</td>
-  <td>Jadwal</td>
-  <td>Main</td>
-</tr>
+<div class="banner">IKLAN BENNER</div>
 
-<tr>
-  <td>SCOR</td>
-  <td>-</td>
-  <td>SCOR</td>
-</tr>
+<div class="jadwal">
+<h3>JADWAL BOLA</h3>
+<div class="row">Liga Spanyol <a href="#">klik</a></div>
+<div class="row">Liga Prancis <a href="#">buka</a></div>
+<div class="row">Liga Inggris <a href="#">link</a></div>
+<div class="row">Liga Italia <a href="#">klik</a></div>
+<div class="row">Liga Jerman <a href="#">buka</a></div>
+<div class="row">Liga Belanda <a href="#">link</a></div>
+</div>
+<div class="row">Liga France <a href="#">buka</a></div>
+<div class="row">Liga Inggris <a href="#">link</a></div>
+</div>
 
-<tr>
-  <td colspan="3" class="link">
-    <a href="#">SITUS SLOT DI KLIK LINK</a>
-  </td>
-</tr>
-</table>
+<!-- KONTAK / LINK -->
+<div style="margin-top:20px;padding:15px;border-top:1px solid rgba(255,255,255,.2)">
+  <h3 style="margin-bottom:10px">HUBUNGI KAMI</h3>
 
-<h2>PASARAN RESULT ANGKA TOGEL</h2>
+  <div style="display:flex;gap:15px;flex-wrap:wrap;justify-content:center">
 
-<table>
-<tr>
-  <td>CAMBODIA</td>
-  <td>CHINA</td>
-  <td class="link"><a href="#">SITUS SLOT DI KLIK LINK</a></td>
-</tr>
+    <!-- WHATSAPP -->
+    <a href="https://wa.me/6281234567890" target="_blank" style="text-decoration:none">
+      <div style="display:flex;align-items:center;gap:8px;background:#25D366;padding:10px 14px;border-radius:10px;color:#000;font-weight:bold">
+        <span>📱</span> WhatsApp
+      </div>
+    </a>
 
-<tr>
-  <td>TOTO MACAU</td>
-  <td>SINGAPORE</td>
-  <td class="link"><a href="#">SITUS SLOT DI KLIK LINK</a></td>
-</tr>
+    <!-- TELEGRAM -->
+    <a href="https://t.me/usernameanda" target="_blank" style="text-decoration:none">
+      <div style="display:flex;align-items:center;gap:8px;background:#229ED9;padding:10px 14px;border-radius:10px;color:#fff;font-weight:bold">
+        <span>✈️</span> Telegram
+      </div>
+    </a>
 
-<tr>
-  <td>SYDNEY</td>
-  <td>HONGKONG</td>
-  <td class="link"><a href="#">SITUS SLOT DI KLIK LINK</a></td>
-</tr>
+    <!-- LIVE CHAT -->
+    <a href="#" style="text-decoration:none">
+      <div style="display:flex;align-items:center;gap:8px;background:#ffcc00;padding:10px 14px;border-radius:10px;color:#000;font-weight:bold">
+        <span>💬</span> Live Chat
+      </div>
+    </a>
 
-<tr class="highlight">
-  <td colspan="3">
-    <div class="running-text">
-      <span>
-        3536 Sydney --- 8736 Cambodia --- 8463 Hongkong --- 
-        3536 Sydney --- 8736 Cambodia --- 8463 Hongkong ---
-        3536 Sydney --- 8736 Cambodia --- 8463 Hongkong
-      </span>
-    </div>
-  </td>
-</tr>
-</table>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+<script>
+const data={
+  cambodia:"8463",
+  macau:"2345",
+  sydney:"7788",
+  china:"9912",
+  singapore:"6621",
+  jepang:"1199",
+  taiwan:"4455",
+  hongkong:"8833"
+};
+
+for(let key in data){
+  document.getElementById(key).innerText=data[key];
+}
+
+let text="HASIL TERBARU: ";
+for(let key in data){text+=key.toUpperCase()+":"+data[key]+" | ";}
+document.getElementById("runningText").innerText=text;
+
+setInterval(()=>{location.reload();},60000);
+</script>
 
 </body>
 </html>
