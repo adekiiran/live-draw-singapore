@@ -33,12 +33,11 @@ letter-spacing:2px;
 }
 
 /* ?? IKLAN HEADER */
-.banner-top{
-display:flex;
-justify-content:space-between;
-background:#90a4ae;
-padding:10px;
-font-weight:bold;
+.banner-top img{
+width:100%;
+height:80px;
+object-fit:cover;
+border-radius:6px;
 }
 
 /* ?? BAR JALAN */
@@ -127,7 +126,8 @@ animation:geser 0.5s infinite;
 /* ?? IKLAN */
 .right{
 flex:1;
-display:flex;
+display:grid;
+grid-template-columns: repeat(2,1fr);
 gap:10px;
 padding:10px;
 }
@@ -138,15 +138,23 @@ flex:1;
 
 .ads img{
 width:100%;
-margin-bottom:10px;
+height:120px;
+object-fit:cover;
 border-radius:8px;
-transition:.3s;
 }
 
 .ads img:hover{
 transform:scale(1.05);
 box-shadow:0 0 10px gold;
 }
+
+/* RESPONSIVE HP */
+@media(max-width:768px){
+.right{
+grid-template-columns: 1fr;
+}
+}
+
 </style>
 </head>
 
@@ -158,10 +166,14 @@ box-shadow:0 0 10px gold;
 <div class="sub">SITUS RESMI PASARAN TOGEL SELURUH DUNIA</div>
 </div>
 
-<!-- ?? IKLAN TEXT -->
+<!-- 2 BANNER ATAS -->
 <div class="banner-top">
-<div>IKLAN</div>
-<div>BENNER</div>
+<a href="https://lxscore.com">
+<img src="https://blogger.googleusercontent.com/img/a/AVvXsEifWJ8Y2JNuKDiPJE_aXOwlBaeOZoL9wvrKaqz0EAqfdZoUuxS0I8wjePAAg_LAYW64iNxEBtS9ta5C-AOI0KmJXV9qQbzw_2EbjaRerqVwJxU35smr3BlCyKYl87KjmSP4QYyE9zWNH-ntr8Y77Z7HkkKGqLMlOF52spPfc4yml4fVfB69EcZ1A-cArzWO">
+</a>
+<a href="https://www.faqwalla.com">
+<img src="https://via.placeholder.com/600x80?text=BANNER+ATAS">
+</a>
 </div>
 
 <!-- ?? RUNNING TEXT -->
@@ -177,101 +189,130 @@ box-shadow:0 0 10px gold;
 
 <div class="hasil-grid">
 
-<a href="https://situskamu.com">HONGKONG DAY = 2882<span class="arrow">?</span></a>
-<a href="https://situskamu.com">HONGKONGPOOLS = 9493<span class="arrow">?</span></a>
+<a href="#">
+<span class="nama">HONGKONG DAY</span>
+<span class="angka">2882</span>
+</a>
+<a href="#">
+<span class="nama">HONGKONG DAY</span>
+<span class="angka">9493</span>
+</a>
 
-<a href="https://situskamu.com">HONGKONG LOTTO = 7711<span class="arrow">?</span></a>
-<a href="https://situskamu.com">PCSO = 0012<span class="arrow">?</span></a>
+<a href="#">
+<span class="nama">HONGKONG LOTTO</span>
+<span class="angka">7711</span>
+</a>
+<a href="#">
+<span class="nama">PCSO</span>
+<span class="angka">0012</span>
+</a>
 
-<a href="https://situskamu.com">SINGAPORE TOTO = xxxx<span class="arrow">?</span></a>
-<a href="https://situskamu.com">Singapore Pools = xxxx<span class="arrow">?</span></a>
+<a href="#">
+<span class="nama">SINGAPORE TOTO</span>
+<span class="angka">xxxx</span>
+</a>
+<a href="#">
+<span class="nama">Singapore Pool</span>
+<span class="angka">xxxx</span>
+</a>
+<a href="#">
+<span class="nama">TOTOMACAU 19:00 WIB</span>
+<span class="angka">8755</span>
+</a>
+<a href="#">
+<span class="nama">TOTOMACAU 22:00 WIB</span>
+<span class="angka">8790</span>
+</a>
 
-<a href="https://situskamu.com">TOTOMACAU 19:00 WIB = 8755<span class="arrow">?</span></a>
-<a href="https://situskamu.com">TOTOMACAU 22:00 WIB = 8790<span class="arrow">?</span></a>
+a href="#">
+<span class="nama">TOTOMACAU 13:00 WIB</span>
+<span class="angka">7968</span>
+</a>
+a href="#">
+<span class="nama">TOTOMACAU 00:01 WIB</span>
+<span class="angka">8935</span>
+</a>
 
-<a href="https://situskamu.com">TOTOMACAU 00:01 WIB = 8935<span class="arrow">?</span></a>
-<a href="https://situskamu.com">TOTOMACAU 13:00 WIB = 4126<span class="arrow">?</span></a>
+<a href="https://situskamu.com">TOTOMACAU 16:00 WIB= 9090<span class="arrow">?</span></a>
+<a href="https://situskamu.com">TOTOMACAU 23:00 WIB= 4126<span class="arrow">?</span></a>
 
-<a href="https://situskamu.com">TOTOMACAU 16:00 WIB = 9090<span class="arrow">?</span></a>
-<a href="https://situskamu.com">TOTOMACAU 23:00 WIB = 4126<span class="arrow">?</span></a>
+<a href="https://situskamu.com">SYDNEYPOOLS= 5263<span class="arrow">?</span></a>
+<a href="https://situskamu.com">SYDNEY LOTTO= 4752<span class="arrow">?</span></a>
 
-<a href="https://situskamu.com">SYDNEYPOOLS = 5263<span class="arrow">?</span></a>
-<a href="https://situskamu.com">SYDNEY LOTTO = 4752<span class="arrow">?</span></a>
+<a href="https://situskamu.com">MAGNUM4D= xxxx<span class="arrow">?</span></a>
+<a href="https://situskamu.com">MAGNUM CAMBODIA= 7499<span class="arrow">?</span></a>
 
-<a href="https://situskamu.com">MAGNUM4D = xxxx<span class="arrow">?</span></a>
-<a href="https://situskamu.com">MAGNUM CAMBODIA = 7499<span class="arrow">?</span></a>
+<a href="https://situskamu.com">CAMBODIA= 8710<span class="arrow">?</span></a>
+<a href="https://situskamu.com">SHANGHAI POOLS 11:00= 0062<span class="arrow">?</span></a>
 
-<a href="https://situskamu.com">CAMBODIA<span class="arrow">?</span></a>
-<a href="https://situskamu.com">SHANGHAI POOLS 11:00 = 0062<span class="arrow">?</span></a>
+<a href="https://situskamu.com">SHANGHAI POOLS 15:00= 6403<span class="arrow">?</span></a>
+<a href="https://situskamu.com">SHANGHAI POOLS 23:00= 4186<span class="arrow">?</span></a>
 
-<a href="https://situskamu.com">SHANGHAI POOLS 15:00 = 6403<span class="arrow">?</span></a>
-<a href="https://situskamu.com">SHANGHAI POOLS 23:00 = 4186<span class="arrow">?</span></a>
+<a href="https://situskamu.com">BANGKOK 09:30= 7661<span class="arrow">?</span></a>
+<a href="https://situskamu.com">BEIJING POOLS= 5931<span class="arrow">?</span></a>
 
-<a href="https://situskamu.com">BANGKOK 09:30 = 7661<span class="arrow">?</span></a>
-<a href="https://situskamu.com">BEIJING POOLS = 5931<span class="arrow">?</span></a>
+<a href="https://situskamu.com">TOTO WUHAN 10:00= 7912<span class="arrow">?</span></a>
+<a href="https://situskamu.com">CHINA= 3520<span class="arrow">?</span></a>
 
-<a href="https://situskamu.com">TOTO WUHAN 10:00 = 7912<span class="arrow">?</span></a>
-<a href="https://situskamu.com">CHINA = 3520<span class="arrow">?</span></a>
+<a href="https://situskamu.com">XIAMEN LOTTERY= 3779<span class="arrow">?</span></a>
+<a href="https://situskamu.com">CHIANGMAI LOTTERY= 2873<span class="arrow">?</span></a>
 
-<a href="https://situskamu.com">XIAMEN LOTTERY = 3779<span class="arrow">?</span></a>
-<a href="https://situskamu.com">CHIANGMAI LOTTERY = 2873<span class="arrow">?</span></a>
+<a href="https://situskamu.com">PERDANA 4D= 2679<span class="arrow">?</span></a>
+<a href="https://situskamu.com">GRAB POOLS= 8387<span class="arrow">?</span></a>
 
-<a href="https://situskamu.com">PERDANA 4D = 2679<span class="arrow">?</span></a>
-<a href="https://situskamu.com">GRAB POOLS = 8387<span class="arrow">?</span></a>
+<a href="https://situskamu.com">RWANDA LOTTO = 8710<span class="arrow">?</span></a>
+<a href="https://situskamu.com">BATAVIA= 8710<span class="arrow">?</span></a>
 
-<a href="https://situskamu.com">RWANDA LOTTO<span class="arrow">?</span></a>
-<a href="https://situskamu.com">BATAVIA<span class="arrow">?</span></a>
+<a href="https://situskamu.com">KINGKONG POOLS= 8710<span class="arrow">?</span></a>
+<a href="https://situskamu.com">JAKARTA POOLS= 8710<span class="arrow">?</span></a>
 
-<a href="https://situskamu.com">KINGKONG POOLS<span class="arrow">?</span></a>
-<a href="https://situskamu.com">JAKARTA POOLS<span class="arrow">?</span></a>
-
-<a href="https://situskamu.com">MAROCCO = 8710<span class="arrow">?</span></a>
+<a href="https://situskamu.com">MAROCCO= 8710<span class="arrow">?</span></a>
 <a href="https://situskamu.com">MOROCCO QUATRO 00:00 WIB = 2201<span class="arrow">?</span></a>
 
 <a href="https://situskamu.com">MOROCCO QUATRO 03:00 WIB = 5271<span class="arrow">?</span></a>
-<a href="https://situskamu.com">MOROCCO QUATRO 21:00 WIB = 6483<<span class="arrow">?</span></a>
+<a href="https://situskamu.com">MOROCCO QUATRO 21:00 WIB = 6483<span class="arrow">?</span></a>
 
 <a href="https://situskamu.com">MOROCCO QUATRO 18:00 WIB = 3011<span class="arrow">?</span></a>
-<a href="https://situskamu.com">MANCITY4D<span class="arrow">?</span></a>
+<a href="https://situskamu.com">MANCITY4D= xxxx<span class="arrow">?</span></a>
 
-<a href="https://situskamu.com">MANCITYPOOLS<span class="arrow">?</span></a>
-<a href="https://situskamu.com">SEOUL LOTTERY<span class="arrow">?</span></a>
+<a href="https://situskamu.com">MANCITYPOOLS= xxxx<span class="arrow">?</span></a>
+<a href="https://situskamu.com">SEOUL LOTTERY= xxxx<span class="arrow">?</span></a>
 
-<a href="https://situskamu.com">DARWIN 4D<span class="arrow">?</span></a>
-<a href="https://situskamu.com">GERMANY PLUS5 = 0448<span class="arrow">?</span></a>
+<a href="https://situskamu.com">DARWIN 4D= xxxx<span class="arrow">?</span></a>
+<a href="https://situskamu.com">GERMANY PLUS5= 0448<span class="arrow">?</span></a>
 
-<a href="https://situskamu.com">MALIBU4D<span class="arrow">?</span></a>
-<a href="https://situskamu.com">LIVERPOOL LOTTERY<span class="arrow">?</span></a>
+<a href="https://situskamu.com">MALIBU4D= xxxx<span class="arrow">?</span></a>
+<a href="https://situskamu.com">LIVERPOOL LOTTERY= xxxx<span class="arrow">?</span></a>
 
-<a href="https://situskamu.com">BULLS EYE<span class="arrow">?</span></a>
-<a href="https://situskamu.com">CANADA<span class="arrow">?</span></a>
+<a href="https://situskamu.com">BULLS EYE= xxxx<span class="arrow">?</span></a>
+<a href="https://situskamu.com">CANADA= xxxx<span class="arrow">?</span></a>
 
-<a href="https://situskamu.com">BRAZIL<span class="arrow">?</span></a>
-<a href="https://situskamu.com">MALIBUCITYPOOLS<span class="arrow">?</span></a>
+<a href="https://situskamu.com">BRAZIL= xxxx<span class="arrow">?</span></a>
+<a href="https://situskamu.com">MALIBUCITYPOOLS= xxxx<span class="arrow">?</span></a>
 
-<a href="https://situskamu.com">WINCHESTER LOTTERY<span class="arrow">?</span></a>
-<a href="https://situskamu.com">PARIS LOTTERY<span class="arrow">?</span></a>
+<a href="https://situskamu.com">WINCHESTER LOTTERY= xxxx<span class="arrow">?</span></a>
+<a href="https://situskamu.com">PARIS LOTTERY= xxxx<span class="arrow">?</span></a>
 
-<a href="https://situskamu.com">MONGOLIA<span class="arrow">?</span></a>
-<a href="https://situskamu.com">ANKARAPOOLS<span class="arrow">?</span></a>
+<a href="https://situskamu.com">MONGOLIA= xxxx<span class="arrow">?</span></a>
+<a href="https://situskamu.com">ANKARAPOOLS= xxxx<span class="arrow">?</span></a>
 
-<a href="https://situskamu.com">PATTAYA LOTTERY<span class="arrow">?</span></a>
-<a href="https://situskamu.com">HOKIDRAW POOL<span class="arrow">?</span></a>
+<a href="https://situskamu.com">PATTAYA LOTTERY= xxxx<span class="arrow">?</span></a>
+<a href="https://situskamu.com">HOKIDRAW POOL= xxxx<span class="arrow">?</span></a>
 
-<a href="https://situskamu.com">BARCELONA<span class="arrow">?</span></a>
-<a href="https://situskamu.com">MANILA POOLS<span class="arrow">?</span></a>
+<a href="https://situskamu.com">BARCELONA= xxxx<span class="arrow">?</span></a>
+<a href="https://situskamu.com">MANILA POOLS= xxxx<span class="arrow">?</span></a>
 
-<a href="https://situskamu.com">ORLANDO<span class="arrow">?</span></a>
-<a href="https://situskamu.com">TOREGON 13:00<span class="arrow">?</span></a>
+<a href="https://situskamu.com">ORLANDO= xxxx<span class="arrow">?</span></a>
+<a href="https://situskamu.com">TOREGON 13:00= xxxx<span class="arrow">?</span></a>
 
-<a href="https://situskamu.com">TEXAS DAY<span class="arrow">?</span></a>
-<a href="https://situskamu.com">TEXAS EVENING<span class="arrow">?</span></a>
+<a href="https://situskamu.com">TEXAS DAY= xxxx<span class="arrow">?</span></a>
+<a href="https://situskamu.com">TEXAS EVENING= xxxx<span class="arrow">?</span></a>
 
-<a href="https://situskamu.com">TEXAS MORNING<span class="arrow">?</span></a>
-<a href="https://situskamu.com">NEVADA<span class="arrow">?</span></a>
+<a href="https://situskamu.com">TEXAS MORNING= xxxx<span class="arrow">?</span></a>
+<a href="https://situskamu.com">NEVADA= xxxx<span class="arrow">?</span></a>
 
-<a href="https://situskamu.com">USA NIGHT<span class="arrow">?</span></a>
-<a href="https://situskamu.com">OREGON 12:00<span class="arrow">?</span></a>
+<a href="https://situskamu.com">USA NIGHT= xxxx<span class="arrow">?</span></a>
+<a href="https://situskamu.com">OREGON 12:00= xxxx<span class="arrow">?</span></a>
 
 <a href="https://situskamu.com">OREGON 16:00<span class="arrow">?</span></a>
 <a href="https://situskamu.com">OREGON 13:00<span class="arrow">?</span></a>
@@ -318,7 +359,7 @@ box-shadow:0 0 10px gold;
 <a href="https://situskamu.com">SANTAFE LOTTERY<span class="arrow">?</span></a>
 <a href="https://situskamu.com">FLORIDA DAY<span class="arrow">?</span></a>
 
-<a href="https://situskamu.com">FLORENCE LOTTERY<span class="arrow">?</span></a>
+<a href="https://situskamu.com">FLORENCE LOTTERY    = xxxx<span class="arrow">?</span></a>
 <a href="https://situskamu.com">ROME LOTTERY<span class="arrow">?</span></a>
 
 </div>
@@ -331,37 +372,22 @@ box-shadow:0 0 10px gold;
 
 <div class="ads">
 <a href="https://lxscore.com"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEifWJ8Y2JNuKDiPJE_aXOwlBaeOZoL9wvrKaqz0EAqfdZoUuxS0I8wjePAAg_LAYW64iNxEBtS9ta5C-AOI0KmJXV9qQbzw_2EbjaRerqVwJxU35smr3BlCyKYl87KjmSP4QYyE9zWNH-ntr8Y77Z7HkkKGqLMlOF52spPfc4yml4fVfB69EcZ1A-cArzWO"></a>
-<a href="https://www.faqwalla.com"><img src="https://via.placeholder.com/120x250?text=IKLAN+2"></a>
+<a href="https://www.faqwalla.com"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEgtraMjFJzrHrYb0up1Kc7ZPFbeUhep4axMSQiCvRqyhgy3YO-YUhrCI24lEDY1x5fXXmed8J-gL61V3yOa-dGjKeH4Lm09elw7MrZ4SuqYs2svzZ3HBMETKcRByzfXHLjFZIvdywnyDfR3pKVfgXlhJFNoBjT1IA6KN8_yj9SAyRGbQMR2daIV8KiDo2W3/120x250?text=IKLAN+2"></a>
 </div>
 
 <div class="ads">
-<a href="hhttps://coloknetapp.com"><img src="https://via.placeholder.com/120x250?text=IKLAN+3"></a>
+<a href="https://coloknetapp.com"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEiTje-W2xT8ji4TKcDEedE2Baz526PRLLuRdKBCQH-jsCLFHtLvbGZaa7eBcU9Z_2MGrQ9HI31km9e9-g1YmmptLXVmRx-l3pYJw15Nx6Z3DG8zXtLwvZcK5lZLFAv1K5gag-lJ2OFJQimObzjbASoRUYnP5Gg82B40nFNyufS4XyWU5zBVycW9jJSyQwo2/120x250?text=IKLAN+3"></a>
 <a href="https://www.12345proxey.net"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEhQDYYDldTaOGMNMYgdJ4D2OSaQaUl7jma9Yl7JIxCPkp__W9TG111r05l9uGsk505EB1_9w_TeSoByXZWwSIjixkUIp891FbxtRScT8M2CDxFCt3eo0fkbfxn4LytDjg50j0gF5HVctRUW-vGuiKuOlYc4in9iQs1YLWDXeXCNBO5GCihExO7zeMSLf5U_"></a>
 </div>
 
 <div class="ads">
 <a href="https://www.psychology-essays.com"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEixaS0r8CyTxWXwQQszX4g6GUROinWIkK8kpZbeH8JyrsXhyfWI0Z1hAqt328snSqXQs9rUMzazp6gADtBqvPf5jp7T53spEUaR6mP8d_ifUDegw6h6y6wVR5EhQ5FwUzjHn-_6AqP67RTiV3rGjTQu-YFfMAMws_uHKs-yCGtrwvlK9V7_oq-Elh8DY9JB"></a>
-<a href="https://linkkamu.com"><img src="https://via.placeholder.com/120x250?text=IKLAN+6"></a>
+<a href="https://linkkamu.com"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEjpnt-woDumQxpVY0ylperyxA9Tm2_J1GiSJ82ttHNX45awaBDTQyI79LsmIE1M5pJrn-pi9IIIBwCLRt9B-Q3ZSXcO2-XMYMPW--T7oR_I_pE2TFLbVVzlHBrfmNzcAeR3mJJp1A7Awvyehf0yymdrOgNVM3N2aMwGMgVBrRhSZ08X647s3cmUXo25cp-k/120x250?text=IKLAN+6"></a>
 </div>
 
 </div>
 
 </div>
-<script>
-async function getData(){
-  let res = await fetch("data.json");
-  let data = await res.json();
 
-  let html="";
-  for(let key in data){
-    html += `<a href="https://situskamu.com">${key} <span class="number">${data[key]}</span></a>`;
-  }
-
-  document.getElementById("dataList").innerHTML = html;
-}
-
-setInterval(getData,5000);
-getData();
-</script>
 </body>
 </html>
