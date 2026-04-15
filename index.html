@@ -3,49 +3,69 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LANAYA88</title>
+<title>LANAYA88 VIP</title>
 
 <style>
-*{
-  box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-  margin:0;
   font-family:Arial, sans-serif;
-  background:#001f2f;
-  color:#fff;
+  background:#000;
+  color:#ffd700;
 }
 
 /* HEADER */
 .header{
-  background:#cfd8dc;
-  color:#000;
   text-align:center;
-  padding:15px;
+  padding:20px;
+  background:linear-gradient(90deg,#000,#222,#000);
+  box-shadow:0 0 20px #ffd700;
 }
 
-.header h1{
-  margin:0;
-  font-size:30px;
-}
-
-.sub{
-  font-size:14px;
-  letter-spacing:2px;
-}
-
-/* RUNNING TEXT */
-.running{
-  background:#ffcc80;
-  color:#000;
-  padding:8px;
+/* HERO */
+.hero{
+  position:relative;
+  height:300px;
   overflow:hidden;
+}
+
+.hero-track{
+  display:flex;
+  transition:0.5s;
+}
+
+.hero-slide{min-width:100%;}
+
+.hero-slide img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+}
+
+/* BUTTON */
+.btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:#0008;
+  color:gold;
+  border:none;
+  padding:10px;
+  cursor:pointer;
+}
+
+.prev{left:10px;}
+.next{right:10px;}
+
+/* RUNNING */
+.running{
+  background:#111;
+  padding:10px;
   white-space:nowrap;
+  overflow:hidden;
 }
 
 .running span{
-  display:inline-block;
   animation:jalan 10s linear infinite;
 }
 
@@ -54,135 +74,203 @@ body{
   100%{transform:translateX(-100%)}
 }
 
-/* LAYOUT */
-.container{
-  display:flex;
-}
-
-/* KIRI */
-.left{
-  flex:2;
-  height:500px;
-  overflow:hidden;
-  border:2px solid #0ff;
-}
-
-.scroll{
-  animation:scrollUp 20s linear infinite;
-}
-
-@keyframes scrollUp{
-  0%{transform:translateY(0);}
-  100%{transform:translateY(-50%);}
-}
-
 /* GRID */
+.container{display:flex;}
+
+.left{flex:2;padding:10px;}
+
 .hasil-grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
-  gap:5px;
-  padding:10px;
+  gap:10px;
 }
 
-.hasil-grid a{
+.card{
+  background:#111;
+  padding:15px;
+  border:1px solid gold;
+  box-shadow:0 0 10px gold;
   display:flex;
   justify-content:space-between;
-  align-items:center;
-  background:#002b3f;
-  color:#00eaff;
-  padding:10px;
-  text-decoration:none;
-  border:1px solid #0ff;
-  box-shadow:0 0 5px #0ff;
+  cursor:pointer;
 }
 
-/* TEXT */
-.nama{ text-align:left; }
-.angka{ text-align:right; color:#00ff99; }
-
-/* IKLAN */
-.right{
-  flex:1;
-  padding:10px;
+.card:hover{
+  box-shadow:0 0 20px gold;
 }
 
-.ads img{
-  width:100%;
-  margin-bottom:10px;
-  border-radius:8px;
-}
+.angka{color:#00ff99;}
 
-/* FLOATING */
-.floating-chat{
+.right{flex:1;padding:10px;}
+
+.ads img{width:100%;}
+
+/* LOGIN */
+#loginBox{
   position:fixed;
-  bottom:20px;
-  right:20px;
-}
-
-.floating-chat a{
+  top:0;left:0;
+  width:100%;height:100%;
+  background:#000c;
   display:flex;
   align-items:center;
-  gap:8px;
-  background:#002b3f;
-  padding:8px 12px;
-  border-radius:50px;
-  color:#fff;
-  text-decoration:none;
+  justify-content:center;
+}
+
+#loginBox div{
+  background:#111;
+  padding:20px;
+  border:1px solid gold;
+}
+
+/* JACKPOT */
+#jackpot{
+  display:none;
+  position:fixed;
+  top:40%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-size:40px;
+  color:gold;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- LOGIN -->
+<div id="loginBox">
+  <div>
+    <h3>LOGIN MEMBER</h3>
+    <input placeholder="Username"><br><br>
+    <input type="password" placeholder="Password"><br><br>
+    <button onclick="login()">MASUK</button>
+  </div>
+</div>
+
 <div class="header">
-  <h1>LANAYA88</h1>
-  <div class="sub">SITUS RESMI PASARAN TOGEL</div>
+  <h1>LANAYA88 VIP</h1>
 </div>
 
-<!-- BANNER -->
-<div class="ads">
-  <img src="https://via.placeholder.com/600x80">
+<!-- SLIDER -->
+<div class="hero" id="hero">
+  <button class="btn prev" onclick="prev()">❮</button>
+  <button class="btn next" onclick="next()">❯</button>
+
+  <div class="hero-track" id="heroTrack">
+    <div class="hero-slide"><img src="https://via.placeholder.com/1200x300"></div>
+    <div class="hero-slide"><img src="https://via.placeholder.com/1200x300"></div>
+    <div class="hero-slide"><img src="https://via.placeholder.com/1200x300"></div>
+  </div>
 </div>
 
-<!-- RUNNING -->
 <div class="running">
-  <span>PASARAN RESULT UPDATE SETIAP HARI</span>
+  <span>🔥 RESULT UPDATE OTOMATIS SETIAP HARI 🔥</span>
 </div>
 
-<!-- CONTENT -->
+<!-- JACKPOT -->
+<div id="jackpot">🎉 JACKPOT 🎉</div>
+
 <div class="container">
 
-  <!-- DATA -->
-  <div class="left">
-    <div class="scroll">
-      <div class="hasil-grid">
+<div class="left">
+<div class="hasil-grid">
 
-        <a href="#"><span class="nama">HONGKONG</span><span class="angka">2882</span></a>
-        <a href="#"><span class="nama">PCSO</span><span class="angka">0012</span></a>
-        <a href="#"><span class="nama">MACAU</span><span class="angka">8755</span></a>
-        <a href="#"><span class="nama">BANGKOK</span><span class="angka">7661</span></a>
+<div class="card" onclick="klik()">
+<span>HONGKONG</span><span class="angka" data-target="8888">0</span>
+</div>
 
-      </div>
-    </div>
-  </div>
+<div class="card">
+<span>LIVE DRAW</span><span id="live">0000</span>
+</div>
 
-  <!-- IKLAN -->
-  <div class="right">
-    <div class="ads">
-      <img src="https://via.placeholder.com/300x120">
-    </div>
-  </div>
+<div class="card" onclick="klik()">
+<span>MACAU</span><span class="angka" data-target="7777">0</span>
+</div>
+
+<div class="card" onclick="klik()">
+<span>BANGKOK</span><span class="angka" data-target="9999">0</span>
+</div>
+
+</div>
+</div>
+
+<div class="right">
+<div class="ads">
+<img src="https://via.placeholder.com/300x250">
+</div>
+</div>
 
 </div>
 
-<!-- FLOATING -->
-<div class="floating-chat">
-  <a href="https://wa.me/6281234567890">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="25">
-    WhatsApp
-  </a>
-</div>
+<audio id="klikSound" src="https://www.soundjay.com/buttons/sounds/button-16.mp3"></audio>
+
+<script>
+/* LOGIN */
+function login(){
+  document.getElementById("loginBox").style.display="none";
+}
+
+/* SLIDER */
+let i=0;
+const track=document.getElementById("heroTrack");
+const total=3;
+
+function update(){
+  track.style.transform="translateX(-"+(i*100)+"%)";
+}
+
+function next(){
+  i=(i+1)%total;
+  update();
+}
+
+function prev(){
+  i=(i-1+total)%total;
+  update();
+}
+
+let auto=setInterval(next,3000);
+
+document.getElementById("hero").onmouseover=()=>clearInterval(auto);
+document.getElementById("hero").onmouseout=()=>auto=setInterval(next,3000);
+
+/* ANGKA */
+document.querySelectorAll(".angka").forEach(el=>{
+  let target=+el.dataset.target;
+  let count=0;
+  let step=Math.ceil(target/50);
+
+  let interval=setInterval(()=>{
+    count+=step;
+    if(count>=target){
+      el.textContent=target;
+      clearInterval(interval);
+    }else{
+      el.textContent=count;
+    }
+  },30);
+});
+
+/* LIVE DRAW */
+setInterval(()=>{
+  let num=Math.floor(Math.random()*9000)+1000;
+  document.getElementById("live").textContent=num;
+},2000);
+
+/* JACKPOT */
+setInterval(()=>{
+  if(Math.random()>0.85){
+    let jp=document.getElementById("jackpot");
+    jp.style.display="block";
+    setTimeout(()=>jp.style.display="none",2000);
+  }
+},5000);
+
+/* SOUND */
+function klik(){
+  document.getElementById("klikSound").play();
+}
+</script>
 
 </body>
 </html>
