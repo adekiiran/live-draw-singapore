@@ -176,6 +176,1342 @@ body{
 <div class="hasil-grid">
 
 <div class="card" onclick="klik()">
+<span>HONGKONG DAY</span><span class="angka" data-target="2882">0</span>
+</div>
+
+<div class="card">
+<span>HONGKONG LOTTO</span><span id="live">7711</span>
+</div>
+
+<div class="card" onclick="klik()">
+<span>PCSO</span><span class="angka" data-target="0012">0</span>
+</div>
+
+<div class="card" onclick="klik()">
+<span>SINGAPORE TOTO</span><span class="angka" data-target="xxxx">0</span>
+</div>
+
+<div class="card" onclick="klik()">
+<span>Singapore Pool</span><span class="angka" data-target="xxxx">0</span>
+</div>
+
+<div class="card" onclick="klik()">
+<span>TOTOMACAU 19:00 WIB</span><span class="angka" data-target="8755">0</span>
+</div>
+
+<div class="card" onclick="klik()">
+<span>TOTOMACAU 22:00 WIB</span><span class="angka" data-target="8790">0</span>
+</div>
+
+<div class="card" onclick="klik()">
+<span>TOTOMACAU 13:00 WIB</span><span class="angka" data-target="7968">0</span>
+</div>
+
+<div class="card" onclick="klik()">
+<span>TOTOMACAU 00:01 WIB</span><span class="angka" data-target="8935">0</span>
+</div>
+
+<div class="card" onclick="klik()">
+<span>TOTOMACAU 16:00 WIB</span><span class="angka" data-target="9090">0</span>
+</div>
+
+<div class="card" onclick="klik()">
+<span>TOTOMACAU 23:00 WIB</span><span class="angka" data-target="4126">0</span>
+</div>
+
+<div class="card" onclick="klik()">
+<span>MAGNUM4D</span><span class="angka" data-target="xxxx">0</span>
+</div>
+
+<div class="card" onclick="klik()">
+<span>MAGNUM CAMBODIA</span><span class="angka" data-target="8710">0</span>
+</div>
+
+<div class="card" onclick="klik()">
+<span>SHANGHAI POOLS 11:00</span><span class="angka" data-target="0062">0</span>
+</div>
+
+<div class="card" onclick="klik()">
+<span>BANGKOK 09:30 WIB</span><span class="angka" data-target="7661">0</span>
+</div>
+
+<div class="card" onclick="klik()">
+<span>BEIJING POOLS</span><span class="angka" data-target="5931">0</span>
+</div>
+
+<div class="card" onclick="klik()">
+<span>TOTO WUHAN 10:00</span><span class="angka" data-target="7912">0</span>
+</div>
+
+<div class="card" onclick="klik()">
+<span>CHINA</span><span class="angka" data-target="3520">0</span>
+</div>
+
+<div class="card" onclick="klik()">
+<span>HXIAMEN LOTTERY</span><span class="angka" data-target="3779">0</span>
+</div>
+
+<div class="card" onclick="klik()">
+<span>CHIANGMAI LOTTERY</span><span class="angka" data-target="6788">0</span>
+</div>
+
+<div class="card" onclick="klik()">
+<span>NEPAL  POOLS</span><span class="angka" data-target="3696">0</span>
+</div>
+
+<div class="card" onclick="klik()">
+<span>EMIRATES DAY</span><span class="angka" data-target="7742">0</span>
+</div>
+
+
+</div>
+</div>
+
+<div class="right">
+<div class="ads">
+<img src="https://via.placeholder.com/300x250">
+</div>
+</div>
+
+</div>
+
+<audio id="klikSound" src="https://www.soundjay.com/buttons/sounds/button-16.mp3"></audio>
+
+<script>
+/* LOGIN */
+function login(){
+  document.getElementById("loginBox").style.display="none";
+}
+
+/* SLIDER */
+let i=0;
+const track=document.getElementById("heroTrack");
+const total=3;
+
+function update(){
+  track.style.transform="translateX(-"+(i*100)+"%)";
+}
+
+function next(){
+  i=(i+1)%total;
+  update();
+}
+
+function prev(){
+  i=(i-1+total)%total;
+  update();
+}
+
+let auto=setInterval(next,3000);
+
+document.getElementById("hero").onmouseover=()=>clearInterval(auto);
+document.getElementById("hero").onmouseout=()=>auto=setInterval(next,3000);
+
+/* ANGKA */
+document.querySelectorAll(".angka").forEach(el=>{
+  let target=+el.dataset.target;
+  let count=0;
+  let step=Math.ceil(target/50);
+
+  let interval=setInterval(()=>{
+    count+=step;
+    if(count>=target){
+      el.textContent=target;
+      clearInterval(interval);
+    }else{
+      el.textContent=count;
+    }
+  },30);
+});
+
+/* LIVE DRAW */
+setInterval(()=>{
+  let num=Math.floor(Math.random()*9000)+1000;
+  document.getElementById("live").textContent=num;
+},2000);
+
+/* JACKPOT */
+setInterval(()=>{
+  if(Math.random()>0.85){
+    let jp=document.getElementById("jackpot");
+    jp.style.display="block";
+    setTimeout(()=>jp.style.display="none",2000);
+  }
+},5000);
+
+/* SOUND */
+function klik(){
+  document.getElementById("klikSound").play();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LANAYA88 VIP</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:Arial, sans-serif;
+  background:#000;
+  color:#ffd700;
+}
+
+/* HEADER */
+.header{
+  text-align:center;
+  padding:20px;
+  background:linear-gradient(90deg,#000,#222,#000);
+  box-shadow:0 0 20px #ffd700;
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  height:300px;
+  overflow:hidden;
+}
+
+.hero-track{
+  display:flex;
+  transition:0.5s;
+}
+
+.hero-slide{min-width:100%;}
+
+.hero-slide img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+}
+
+/* BUTTON */
+.btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:#0008;
+  color:gold;
+  border:none;
+  padding:10px;
+  cursor:pointer;
+}
+
+.prev{left:10px;}
+.next{right:10px;}
+
+/* RUNNING */
+.running{
+  background:#111;
+  padding:10px;
+  white-space:nowrap;
+  overflow:hidden;
+}
+
+.running span{
+  animation:jalan 10s linear infinite;
+}
+
+@keyframes jalan{
+  0%{transform:translateX(100%)}
+  100%{transform:translateX(-100%)}
+}
+
+/* GRID */
+.container{display:flex;}
+
+.left{flex:2;padding:10px;}
+
+.hasil-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+
+.card{
+  background:#111;
+  padding:15px;
+  border:1px solid gold;
+  box-shadow:0 0 10px gold;
+  display:flex;
+  justify-content:space-between;
+  cursor:pointer;
+}
+
+.card:hover{
+  box-shadow:0 0 20px gold;
+}
+
+.angka{color:#00ff99;}
+
+.right{flex:1;padding:10px;}
+
+.ads img{width:100%;}
+
+/* LOGIN */
+#loginBox{
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:#000c;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+#loginBox div{
+  background:#111;
+  padding:20px;
+  border:1px solid gold;
+}
+
+/* JACKPOT */
+#jackpot{
+  display:none;
+  position:fixed;
+  top:40%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-size:40px;
+  color:gold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="loginBox">
+  <div>
+    <h3>LOGIN MEMBER</h3>
+    <input placeholder="Username"><br><br>
+    <input type="password" placeholder="Password"><br><br>
+    <button onclick="login()">MASUK</button>
+  </div>
+</div>
+
+<div class="header">
+  <h1>LANAYA88 VIP</h1>
+</div>
+
+<!-- SLIDER -->
+<div class="hero" id="hero">
+  <button class="btn prev" onclick="prev()">❮</button>
+  <button class="btn next" onclick="next()">❯</button>
+
+  <div class="hero-track" id="heroTrack">
+    <div class="hero-slide"><img src="https://via.placeholder.com/1200x300"></div>
+    <div class="hero-slide"><img src="https://via.placeholder.com/1200x300"></div>
+    <div class="hero-slide"><img src="https://via.placeholder.com/1200x300"></div>
+  </div>
+</div>
+
+<div class="running">
+  <span>🔥 RESULT UPDATE OTOMATIS SETIAP HARI 🔥</span>
+</div>
+
+<!-- JACKPOT -->
+<div id="jackpot">🎉 JACKPOT 🎉</div>
+
+<div class="container">
+
+<div class="left">
+<div class="hasil-grid">
+
+<div class="card" onclick="klik()">
 <span>HONGKONG</span><span class="angka" data-target="8888">0</span>
 </div>
 
@@ -271,6 +1607,359 @@ function klik(){
   document.getElementById("klikSound").play();
 }
 </script>
+<!-- AUDIO -->
+<audio id="klikSound" src="https://www.soundjay.com/buttons/sounds/button-16.mp3"></audio>
+
+<!-- SCRIPT TARUH DI SINI -->
+<script>
+/* LOGIN */
+function login(){
+  document.getElementById("loginBox").style.display="none";
+}
+
+/* SLIDER */
+let i=0;
+const track=document.getElementById("heroTrack");
+const total=3;
+
+function update(){
+  track.style.transform="translateX(-"+(i*100)+"%)";
+}
+
+function next(){ i=(i+1)%total; update(); }
+function prev(){ i=(i-1+total)%total; update(); }
+
+let auto=setInterval(next,3000);
+
+document.getElementById("hero").onmouseover=()=>clearInterval(auto);
+document.getElementById("hero").onmouseout=()=>auto=setInterval(next,3000);
+
+/* ANGKA SUPER HIDUP */
+function animateNumber(el, start, end){
+  let count = start;
+  let step = Math.ceil(Math.abs(end - start)/30);
+
+  let interval = setInterval(()=>{
+    if(count < end){
+      count += step;
+      if(count >= end) count = end;
+    }else{
+      count -= step;
+      if(count <= end) count = end;
+    }
+
+    el.textContent = count;
+
+    if(count === end){
+      clearInterval(interval);
+    }
+  },20);
+}
+
+setInterval(()=>{
+  document.querySelectorAll(".angka").forEach(el=>{
+    let oldVal = parseInt(el.textContent) || 0;
+    let base = parseInt(el.dataset.target) || 1000;
+
+    let newVal = base + Math.floor(Math.random()*50 - 25);
+
+    if(newVal > oldVal){
+      el.style.color = "#00ff99";
+    }else{
+      el.style.color = "#ff4d4d";
+    }
+
+    el.style.opacity = "0.3";
+    setTimeout(()=> el.style.opacity = "1",200);
+
+    animateNumber(el, oldVal, newVal);
+
+    klik();
+  });
+},3000);
+
+/* LIVE DRAW */
+setInterval(()=>{
+  let num=Math.floor(Math.random()*9000)+1000;
+  document.getElementById("live").textContent=num;
+},2000);
+
+/* JACKPOT */
+setInterval(()=>{
+  if(Math.random()>0.85){
+    let jp=document.getElementById("jackpot");
+    jp.style.display="block";
+    setTimeout(()=>jp.style.display="none",2000);
+  }
+},5000);
+
+/* SOUND */
+function klik(){
+  document.getElementById("klikSound").play();
+
+}
+</script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
