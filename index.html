@@ -148,12 +148,79 @@ transform:scale(1.05);
 box-shadow:0 0 10px gold;
 }
 
+/* GRID HASIL */
+.hasil-grid a{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#002b3f;
+color:#00eaff;
+padding:10px;
+text-decoration:none;
+border:1px solid #0ff;
+font-weight:bold;
+animation:kedip 1s infinite;
+}
+
+.nama{
+text-align:left;
+}
+
+.angka{
+text-align:right;
+color:#00ff99;
+font-weight:bold;
+}
+
 /* RESPONSIVE HP */
 @media(max-width:768px){
 .right{
 grid-template-columns: 1fr;
 }
 }
+
+/* CSS kamu yang lain di atas */
+
+/* RESPONSIVE HP */
+@media(max-width:768px){
+.right{
+grid-template-columns: 1fr;
+}
+}
+
+/* ⬇️ TEMPEL DI SINI (PALING BAWAH) */
+
+/* FLOATING CHAT */
+.floating-chat{
+position:fixed;
+bottom:20px;
+right:20px;
+display:flex;
+flex-direction:column;
+gap:10px;
+z-index:999;
+}
+
+.floating-chat a,
+.floating-chat .live{
+display:flex;
+align-items:center;
+gap:8px;
+background:#002b3f;
+color:#fff;
+padding:8px 12px;
+border-radius:50px;
+text-decoration:none;
+cursor:pointer;
+box-shadow:0 0 10px #000;
+}
+
+.floating-chat img{
+width:25px;
+height:25px;
+}
+
+
 
 </style>
 </head>
@@ -224,11 +291,11 @@ grid-template-columns: 1fr;
 <span class="angka">8790</span>
 </a>
 
-a href="#">
+<a href="#">
 <span class="nama">TOTOMACAU 13:00 WIB</span>
 <span class="angka">7968</span>
 </a>
-a href="#">
+<a href="#">
 <span class="nama">TOTOMACAU 00:01 WIB</span>
 <span class="angka">8935</span>
 </a>
@@ -375,18 +442,36 @@ a href="#">
 <a href="https://www.faqwalla.com"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEgtraMjFJzrHrYb0up1Kc7ZPFbeUhep4axMSQiCvRqyhgy3YO-YUhrCI24lEDY1x5fXXmed8J-gL61V3yOa-dGjKeH4Lm09elw7MrZ4SuqYs2svzZ3HBMETKcRByzfXHLjFZIvdywnyDfR3pKVfgXlhJFNoBjT1IA6KN8_yj9SAyRGbQMR2daIV8KiDo2W3/120x250?text=IKLAN+2"></a>
 </div>
 
-<div class="ads">
-<a href="https://coloknetapp.com"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEiTje-W2xT8ji4TKcDEedE2Baz526PRLLuRdKBCQH-jsCLFHtLvbGZaa7eBcU9Z_2MGrQ9HI31km9e9-g1YmmptLXVmRx-l3pYJw15Nx6Z3DG8zXtLwvZcK5lZLFAv1K5gag-lJ2OFJQimObzjbASoRUYnP5Gg82B40nFNyufS4XyWU5zBVycW9jJSyQwo2/120x250?text=IKLAN+3"></a>
-<a href="https://www.12345proxey.net"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEhQDYYDldTaOGMNMYgdJ4D2OSaQaUl7jma9Yl7JIxCPkp__W9TG111r05l9uGsk505EB1_9w_TeSoByXZWwSIjixkUIp891FbxtRScT8M2CDxFCt3eo0fkbfxn4LytDjg50j0gF5HVctRUW-vGuiKuOlYc4in9iQs1YLWDXeXCNBO5GCihExO7zeMSLf5U_"></a>
+<div class="floating-chat">
+
+<a href="https://wa.me/6281234567890" target="_blank" class="wa">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+<span>WhatsApp</span>
+</a>
+
+<a href="https://t.me/usernamekamu" target="_blank" class="tg">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+<span>Telegram</span>
+</a>
+
+<div class="live" onclick="openChat()">
+<img src="https://cdn-icons-png.flaticon.com/512/4712/4712027.png">
+<span class="blink">LIVE CHAT</span>
+<small class="status">● ONLINE</small>
 </div>
 
-<div class="ads">
-<a href="https://www.psychology-essays.com"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEixaS0r8CyTxWXwQQszX4g6GUROinWIkK8kpZbeH8JyrsXhyfWI0Z1hAqt328snSqXQs9rUMzazp6gADtBqvPf5jp7T53spEUaR6mP8d_ifUDegw6h6y6wVR5EhQ5FwUzjHn-_6AqP67RTiV3rGjTQu-YFfMAMws_uHKs-yCGtrwvlK9V7_oq-Elh8DY9JB"></a>
-<a href="https://linkkamu.com"><img src="https://blogger.googleusercontent.com/img/a/AVvXsEjpnt-woDumQxpVY0ylperyxA9Tm2_J1GiSJ82ttHNX45awaBDTQyI79LsmIE1M5pJrn-pi9IIIBwCLRt9B-Q3ZSXcO2-XMYMPW--T7oR_I_pE2TFLbVVzlHBrfmNzcAeR3mJJp1A7Awvyehf0yymdrOgNVM3N2aMwGMgVBrRhSZ08X647s3cmUXo25cp-k/120x250?text=IKLAN+6"></a>
 </div>
 
+<!-- POPUP CHAT -->
+<div id="chatBox" class="chat-box">
+<div class="chat-header">💬 Customer Service</div>
+<div class="chat-body">
+<p>Halo 👋 Admin aktif sekarang, ada yang bisa dibantu?</p>
 </div>
-
+<div class="chat-footer">
+<input type="text" placeholder="Ketik pesan...">
+<button>Kirim</button>
+</div>
 </div>
 
 </body>
