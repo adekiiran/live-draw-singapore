@@ -6,7 +6,11 @@
 <title>LANAYA88</title>
 
 <style>
-body{margin:0;font-family:Arial;background:#0d0631;color:#fff}
+body{
+margin:0;
+font-family:Arial;
+background:#0d0631;
+color:#fff}
 .wrap{max-width:1200px;margin:auto}
 
 /* LINK */
@@ -16,7 +20,38 @@ a{
 }
 
 /* HEADER */
-.top{background:#d8dce0;color:#000;text-align:center;padding:10px}
+.<style>
+
+.top{
+
+  width:min(1100px, 95%);
+
+  margin:40px auto 20px;
+
+  background:#d8dce0;
+
+  color:#000;
+
+  text-align:center;
+
+  padding:20px 15px;
+
+  border-radius:10px;
+
+  box-shadow:0 6px 20px rgba(0,0,0,0.4);
+
+}
+
+</style>
+<div class="top">
+  <div class="site-title">JUDUL BESAR</div>
+
+  <div class="clock-box">
+    <div class="update-text">UPDATE</div>
+    <div id="clock" class="clock"></div>
+    <div id="date" class="date"></div>
+  </div>
+</div>
 
 .banner-row{
   display:flex;
@@ -266,9 +301,11 @@ const list = [
          
 ];
 
+<script>
+// ================= DATA LIST =================
 const data = document.getElementById('dataList');
 
-// DUPLIKAT OTOMATIS UNTUK SCROLL
+// DUPLIKAT UNTUK SCROLL
 const doubleList = [...list, ...list];
 
 function render(){
@@ -284,7 +321,8 @@ function render(){
 
 render();
 
-// AUTO SCROLL
+
+// ================= AUTO SCROLL =================
 let scrollPos = 0;
 
 setInterval(() => {
@@ -301,25 +339,64 @@ setInterval(() => {
 }, 30);
 
 
-// JAM & TANGGAL
-function updateTime(){
-  let now = new Date();
+// ================= JAM BARU =================
+<script>
+function updateClock() {
+  const now = new Date();
 
-  document.getElementById('tgl').innerText =
-    now.toLocaleDateString('id-ID', {
-      weekday:'long',
-      day:'2-digit',
-      month:'long',
-      year:'numeric'
-    });
+  let h = String(now.getHours()).padStart(2, '0');
+  let m = String(now.getMinutes()).padStart(2, '0');
+  let s = String(now.getSeconds()).padStart(2, '0');
 
-  document.getElementById('jam').innerText =
-    now.toLocaleTimeString('id-ID');
+  document.getElementById("clock").textContent = `${h}:${m}:${s}`;
+
+  const hari = ["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
+  const bulan = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+
+  let day = hari[now.getDay()];
+  let date = now.getDate();
+  let month = bulan[now.getMonth()];
+  let year = now.getFullYear();
+
+  document.getElementById("date").textContent = `${day}, ${date} ${month} ${year}`;
 }
 
-setInterval(updateTime,1000);
-updateTime();
+setInterval(updateClock, 1000);
+updateClock();
 </script>
+<body>
+
+  <!-- HTML kamu -->
+  <div class="top">
+ 
+  <div class="site-title">JUDUL BESAR</div>
+
+   <div class="clock-box">
+ 
+    <div class="update-text">UPDATE</div>
+
+    <div id="clock" class="clock"></div>
+
+    <div id="date" class="date"></div>
+    </div>
+  </div>
+      <!-- INI TEMPAT PANAH -->
+     
+<div class="arrows"></div>
+
+     <!-- BARU KONTEN -->
+
+   <div class="big-banner">
+
+  <img src="banner.jpg">
+
+  </div>  
+
+  <!-- SCRIPT DI SINI -->
+  <script>
+    // script kamu
+  </script>
+
 
 </body>
 </html>
